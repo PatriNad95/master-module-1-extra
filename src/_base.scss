@@ -1,0 +1,13 @@
+$primary-color: #7c7b18;
+$secondary-color: #3a3910;
+$background-color: #c2c3c0;
+$light-background: #f9f8db;
+$text-color: white;
+$font-family: Arial, Helvetica, sans-serif;
+
+@mixin flex-center($direction: row, $justify: center, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  gap: $gap;
+}

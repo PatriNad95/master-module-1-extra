@@ -1,0 +1,141 @@
+@use "base" as *;
+
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  @include flex-center(column);
+  font-family: $font-family;
+}
+
+p {
+  margin: 0;
+}
+
+main {
+  display: flex;
+}
+
+.toolbar {
+  @include flex-center(row, space-between);
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.page-title {
+  background-color: $primary-color;
+  color: $text-color;
+  font-size: 25px;
+  padding: 10px;
+}
+
+.list {
+  padding: 20px 0;
+  background-color: $background-color;
+  flex: 1;
+  @include flex-center(row, center, 15px);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer {
+  background-color: $light-background;
+  padding: 5px 10px;
+  font-size: 15px;
+}
+
+.page-container {
+  flex: 1;
+  @include flex-center(row);
+}
+
+nav {
+  background-color: $secondary-color;
+
+  .menu-container {
+    @include flex-center(column);
+    position: sticky;
+    top: 0;
+    width: 150px;
+    font-size: 15px;
+    border-right: 1px solid gray;
+
+    .menu-title {
+      @include flex-center(row, center);
+      color: $text-color;
+      padding: 5px 0;
+      font-weight: bold;
+    }
+
+    ul {
+      @include flex-center(column);
+      list-style-type: none;
+      padding: 0px;
+      margin: 0px;
+
+      li {
+        background-color: $light-background;
+        padding: 5px;
+        border-bottom: 1px solid gray;
+      }
+    }
+  }
+}
+
+.card {
+  width: 200px;
+  border: 1px solid black;
+  padding: 5px;
+  @include flex-center(column, center, 7px);
+  align-items: center;
+  background-color: darkgray;
+
+  img {
+    border-radius: 50%;
+  }
+
+  .name {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .info {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-container,
+  .list {
+    flex-direction: column;
+  }
+
+  .toolbar {
+    display: none;
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+
+    .menu-container {
+      flex-direction: row;
+      width: auto;
+
+      .menu-title {
+        display: none;
+      }
+
+      ul {
+        flex-direction: row;
+        gap: 10px;
+        flex: 1;
+        padding: 5px;
+
+        li {
+          flex: 1;
+        }
+      }
+    }
+  }
+}

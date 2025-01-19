@@ -1,0 +1,162 @@
+body {
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+}
+
+p {
+  margin: 0;
+}
+
+main {
+  display: flex;
+}
+
+.toolbar {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  padding: 5px 10px;
+  display: flex;
+}
+
+.page-title {
+  color: #fff;
+  background-color: #7c7b18;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.list {
+  background-color: #c2c3c0;
+  flex-flow: wrap;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 0;
+  display: flex;
+}
+
+footer {
+  background-color: #f9f8db;
+  padding: 5px 10px;
+  font-size: 15px;
+}
+
+.page-container {
+  flex-direction: row;
+  flex: 1;
+  justify-content: center;
+  gap: 0;
+  display: flex;
+}
+
+nav {
+  background-color: #3a3910;
+}
+
+nav .menu-container {
+  border-right: 1px solid gray;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+  width: 150px;
+  font-size: 15px;
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+
+nav .menu-container .menu-title {
+  color: #fff;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0;
+  padding: 5px 0;
+  font-weight: bold;
+  display: flex;
+}
+
+nav .menu-container ul {
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+nav .menu-container ul li {
+  background-color: #f9f8db;
+  border-bottom: 1px solid gray;
+  padding: 5px;
+}
+
+.card {
+  background-color: #a9a9a9;
+  border: 1px solid #000;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  width: 200px;
+  padding: 5px;
+  display: flex;
+}
+
+.card img {
+  border-radius: 50%;
+}
+
+.card .name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card .info {
+  font-size: 12px;
+}
+
+@media (width <= 768px) {
+  .page-container, .list {
+    flex-direction: column;
+  }
+
+  .toolbar {
+    display: none;
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+  }
+
+  nav .menu-container {
+    flex-direction: row;
+    width: auto;
+  }
+
+  nav .menu-container .menu-title {
+    display: none;
+  }
+
+  nav .menu-container ul {
+    flex-direction: row;
+    flex: 1;
+    gap: 10px;
+    padding: 5px;
+  }
+
+  nav .menu-container ul li {
+    flex: 1;
+  }
+}
+/*# sourceMappingURL=index.b2d9cf43.css.map */
